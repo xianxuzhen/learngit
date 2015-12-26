@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EDU | 网易前端教育事业部</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style\reset.css">
+	<link rel="stylesheet" type="text/css" href="style\style.css">
+</head>
+<body>
+	<!--头部开始-->
+	<div class="m-header">
+		<!--头部LOGO部分开始-->
+		<div class="header flexH">
+			<div class="logo"></div>
+			<div class="icon flex1">
+				<div class="shoppingCarIcon fr"></div>
+				<div class="loginIcon fr"></div>				
+			</div>
+		</div>
+		<!--头部LOGO部分结束-->
+		<!--头部导航部分开始-->
+		<div class="nav">
+			<ul class="navParent flexH">
+				<li class="active flex1">产品设计</li>
+				<li class="flex1">程序语言</li>
+				<li class="flex1">热门课程</li>
+				<li class="flex1">机构介绍</li>
+			</ul>
+		</div>
+		<!--头部导航部分开始-->
+	</div>
+	<!--头部结束-->
+
+	<!--内容开始-->	
+	<div class="m-content">
+		<!--第一页产品设计开始-->	
+		<div class="page1 page">
+			<div class="designCourseBox">
+				<!--内容（第一页产品设计）填充的地方-->
+			</div>
+			<div class="moreBtnBox">
+				<div class="designMoreBtn">点击加载更多内容&gt;&gt;&gt;</div>
+			</div>		
+		</div>
+		<!--第一页产品设计结束-->
+
+		<!--第二页程序语言开始-->
+		<div class="page2 page">
+			<div class="programCourseBox">
+				<!--内容（第二页程序语言）填充的地方-->
+			</div>
+			<div class="moreBtnBox">
+				<div class="programMoreBtn">点击加载更多内容&gt;&gt;&gt;</div>
+			</div>	
+		</div>
+		<!--第二页程序语言结束-->
+
+		<!--第三页热门课程开始-->
+		<div class="page3 page">
+			<h2 class="rank">最热排行榜</h2>
+			<ul class="hotCourseBox">
+				<!--填充热门课程的地方-->			
+			</ul>
+			<script type="text/template" id="hotCoursetemplate">
+				<li class="flexH">
+					<img class="pic" src="{middlePhotoUrl}">
+					<div class="describe flex1">
+						<h3 class="ellipsis">{name}</h3>
+						<div class="good fl"><span>{learnerCount}</span></div>
+					</div>
+				</li>	
+			</script>
+		</div>
+		<!--第三页热门课程结束-->
+
+		<!--第四页机构介绍开始-->
+		<div class="page4 page">
+			<div class="bannerBox">
+				<ul class="banner">
+					<li><img src="./images/banner1.jpg"></li>
+					<li><img src="./images/banner2.jpg"></li>
+					<li><img src="./images/banner3.jpg"></li>
+				</ul>
+				<ul class="pointer">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<h2 class="introduceTitle">机构介绍</h2>
+			<p class="videoTitle">观看下面视频来了解吧</p>
+			<video class="vedio" src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" controls="controls">您的浏览器不支持 video 标签。</video>
+			<h2 class="introduceTitle">网易云课堂</h2>
+			<div class="introduceItem flexH">
+				<div class="productImg"></div>
+				<div class="productDescribe flex1">
+					<p class="productOne">网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
+					<a href="#">了解更多</a>
+				</div>
+			</div>
+			<h2 class="introduceTitle">网易公开课</h2>
+			<div class="introduceItem flexH">
+				<div class="productImg"></div>
+				<div class="productDescribe flex1">
+					<p class="productOne">推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+					<a href="#">了解更多</a>
+				</div>
+			</div>
+			<h2 class="introduceTitle">中国大学MOOC</h2>
+			<div class="introduceItem flexH">
+				<div class="productImg"></div>
+				<div class="productDescribe flex1">
+					<p class="productOne">是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
+					<a href="#">了解更多</a>
+				</div>
+			</div>
+		</div>
+		<!--第四页机构介绍结束-->
+	</div>
+	<script type="text/template" id="coursetemplate">
+		<div class="row flexH">
+			<div class="leftBox flex1">
+				<div class="contentBox">
+					<img src="{middlePhotoUrl1}">
+					<h3 class="title ellipsis">{name1}</h3>
+					<p class="album ellipsis">{provider1}</p>
+					<div class="clearFix">
+						<div class="good fl"><span>{learnerCount1}</span></div>
+						<div class="price fl">￥{price1}</div>
+					</div>					
+				</div>
+			</div>
+			<div class="rightBox flex1">
+				<div class="contentBox">
+					<img src="{middlePhotoUrl2}">
+					<h3 class="title ellipsis">{name2}</h3>
+					<p class="album">{provider2}</p>
+					<div class="clearFix">
+						<div class="good fl"><span>{learnerCount2}</span></div>
+						<div class="price fl">￥{price2}</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</script>
+	<!--内容结束-->
+
+	<!--尾部信息开始-->
+	<div class="m-footer">
+		<p>©2014 icourse163.org 浙ICP备08114786号-1</p>
+		<p>icourses.cn 京ICP备12020869号-2</p>
+		<p>京公网安备110102000459-2</p>
+	</div>
+	<!--尾部信息结束-->
+
+	<script type="text/javascript" src="js\zepto.min.js"></script>
+	<script type="text/javascript" src="js\index.js"></script>
+</body>
+</html>
