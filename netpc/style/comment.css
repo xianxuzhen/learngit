@@ -1,8 +1,4 @@
 body{background-color: #f8f8f8;}
-@font-face {
- font-family: Hiragino;
- src:url(HiraginoSansGBW3.otf);
-}
 /*通用*/
 .comwidth{width: 1206px;margin:0 auto;}
 .fl{float: left;}
@@ -29,7 +25,7 @@ body{background-color: #f8f8f8;}
 #m-banner .cancelfocus:hover{color: #21a557;text-decoration: underline;cursor: pointer;}
 #m-banner .nav ul{background: url(../images/banner_search.png) no-repeat right center;height: 99px; font: 16px/99px "宋体";margin-right: 12px;}
 #m-banner .nav li{margin-right: 56px;}
-#m-banner .nav li a{color: #666666;font-family: "Hiragino";}
+#m-banner .nav li a{color: #666666;font-family: "宋体";font-weight: bold;}
 #m-banner .nav li a:hover{color: #39a030;}
 /*banner模块的banner轮播图*/
 #m-banner .banner{position: relative;overflow: hidden;}
