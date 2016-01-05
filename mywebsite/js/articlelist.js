@@ -10,7 +10,6 @@ $(function(){
 		var start=parameterStr.indexOf("type");
 		var str=parameterStr.slice(start);
 		var type=str.slice(5);
-		console.log(type);
 		//获取模板里面的html字符串
 		var addArticleTplInnerHtml=$(".addArticleTpl").html();
 		var articleListBox=$(".articleList");
@@ -91,6 +90,89 @@ $(function(){
 			}
 			articleListBox.html(innerhtml);
 		}		
+	})();
+
+	//点击不同类目，显示不同数据
+	(function(){
+		$(".category li a").click(function(){
+			$(".category li").removeClass("default");
+			//获取模板里面的html字符串
+			var addArticleTplInnerHtml=$(".addArticleTpl").html();
+			var articleListBox=$(".articleList");
+			var type=$(this).attr("type");
+			//根据不同类目，设置显示不同类目文章
+			switch(type){
+				case "html":
+					$(".category li").eq(1).addClass("default");
+					setAddArticleListBox("html");
+					break;
+				case "css":
+					$(".category li").eq(2).addClass("default");
+					setAddArticleListBox("css");
+					break;
+				case "javascript":
+					$(".category li").eq(3).addClass("default");
+					setAddArticleListBox("javascript");
+					break;
+				case "jquery":
+					$(".category li").eq(4).addClass("default");
+					setAddArticleListBox("jquery");
+					break;
+				case "zepto":
+					$(".category li").eq(5).addClass("default");
+					setAddArticleListBox("zepto");
+					break;
+				case "layout":
+					$(".category li").eq(6).addClass("default");
+					setAddArticleListBox("layout");
+					break;
+				case "flex":
+					$(".category li").eq(7).addClass("default");
+					setAddArticleListBox("flex");
+					break;
+				case "git":
+					$(".category li").eq(8).addClass("default");
+					setAddArticleListBox("git");
+					break;
+				case "buildWebsite":
+					$(".category li").eq(9).addClass("default");
+					setAddArticleListBox("buildWebsite");
+					break;
+				case "resources":
+					$(".category li").eq(10).addClass("default");
+					setAddArticleListBox("resources");
+					break;									
+				case "encourage":
+					$(".category li").eq(11).addClass("default");
+					setAddArticleListBox("encourage");
+					break;
+				case "noCategory":
+					$(".category li").eq(12).addClass("default");
+					setAddArticleListBox("noCategory");
+					break;
+			};
+			//填充文章的函数
+			function setAddArticleListBox(type){
+				var attr=dataObj[type];
+				var innerhtml="";
+				for(var i=0;i<attr.length;i++){
+					var obj={};
+					obj.imgIndex=0;
+					obj.addArticleTtitle=attr[i].addArticleTtitle;
+					obj.addarticleContent=attr[i].addarticleContent;
+					obj.classify=attr[i].classify;
+					obj.articleId=attr[i].articleId;
+					obj.good=attr[i].good;
+					obj.view=attr[i].view;
+					obj.comments=attr[i].comments;
+					innerhtml=innerhtml+util.formatTemplate(obj,addArticleTplInnerHtml);
+				}
+				if(innerhtml==""){
+					innerhtml="刚刚做好大框架，正在努力更新中，敬请期待...";
+				}
+				articleListBox.html(innerhtml);
+			}		
+		});
 	})();
 	
 	//点赞模块
