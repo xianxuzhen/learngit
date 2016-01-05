@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平居中</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		/* float+overflow   兼容性好*/
+		.left1{float: left;background-color: #ddd;margin-right: 20px;}
+		.right1{overflow: hidden;background-color: #555;}
+		
+
+		/* table   兼容性好   IE8以上*/
+		.parent2{display: table;width: 100%;}
+		.left2,.right2{display: table-cell;}
+		.left2{width: 0.1%;padding-right: 20px; background-color: #ddd;}
+		.right2{background-color: #555;}
+
+		/*flex 兼容性差*/
+		.parent3{display: flex;}
+		.left3{margin-right: 20px;background-color: #ddd;}
+		.right3{flex:1;background-color: #555;}	
+
+		/* 两列不定宽+自适应  新增加的列和左列样式一样  兼容性好*/
+		.left4,.middle4{float: left;background-color: #ddd;margin-right: 20px;}
+		.right4{overflow: hidden;background-color: #555;}
+		
+
+
+	
+	</style>
+</head>
+<body>
+	<div>
+		<div class="left1">
+			<p>left</p>
+		</div>
+		<div class="right1">
+			<p>right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="parent2">
+		<div class="left2">
+			<p>left</p>
+		</div>
+		<div class="right2">
+			<p>right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="parent3">
+		<div class="left3">
+			<p>left</p>
+		</div>
+		<div class="right3">
+			<p>right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="parent4">
+		<div class="left4">
+			<p>left</p>
+		</div>
+		<div class="middle4">
+			<p>middle</p>
+		</div>
+		<div class="right4">
+			<p>right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

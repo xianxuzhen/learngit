@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title> 
+    <style type="text/css">
+    	/*table-cell+vertical-align 兼容到IE8以上，如果想兼容IE6、7,把 DIV改成table*/
+		.parent1{display: table-cell;vertical-align: middle;background-color: black;height: 100px;}
+		.child1{background-color: white;}
+
+		/*absolute+transform 兼容性IE9以上*/
+		.parent2{position: relative;height: 100px;background-color: black;}
+		.child2{position: absolute;top:50%; transform:translateY(-50%); background-color: white;}
+
+		/*absolute+transform 兼容性IE9以上*/
+		.parent3{display: flex; align-items:center; background-color: black; height: 100px;}
+		.child3{background-color: white;}
+    </style>
+</head>
+<body>
+	<div class="parent1">
+		<div class="child1">DEMO1</div>
+	</div>
+	<br>
+	<div class="parent2">
+		<div class="child2">DEMO2</div>
+	</div>
+	<br>
+	<div class="parent3">
+		<div class="child3">DEMO2</div>
+	</div>
+</body>
+</html>

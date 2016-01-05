@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平居中</title>
+	<style type="text/css">
+		/* inline-block+text-align    兼容性好，给display: inline-block;做兼容（*display:inline;*zoom:1;）后可以支持到IE6*/
+		.child1{display: inline-block;background-color: black;}
+		.parent1{text-align: center;}
+
+		/*table+margin             兼容性：display: table IE8以上，如果想支持IE6、7可以把div换位table结构*/
+		.child2{display: table;margin: 0 auto; background-color: black;}
+
+		/*absolute+transform       兼容性：transform IE9以上  优点：设置position: absolute;的元素脱离文档流，不影响其他子元素*/
+		.parent3{position: relative;}
+		.child3{position: absolute;left: 50%;transform:translateX(-50%);background-color: black;}
+
+		/*absolute+transform       兼容性：flex IE9以上  k*/
+		.parent4{display: flex;justify-content:center;}
+		.child4{background-color: black;}
+
+
+	</style>
+</head>
+<body>
+	<div class="parent1">
+		<div class="child1">DEMO1</div>
+	</div>
+	<br>
+	<div class="parent2">
+		<div class="child2">DEMO2</div>
+	</div>
+	<br>
+	<div class="parent3">
+		<div class="child3">DEMO3</div>
+	</div>
+	<br>
+	<br>
+	<div class="parent4">
+		<div class="child4">DEMO4</div>
+	</div>
+
+</body>
+</html>

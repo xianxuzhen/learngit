@@ -1,0 +1,74 @@
+/*公共部分*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.comWidth{width: 1060px;margin: 0 auto;}
+.clearFix:after{content: ".";display: block;height: 0;clear: both;overflow: hidden;visibility: hidden;}
+.ellipsis{white-space: nowrap;text-overflow:ellipsis;overflow: hidden;}
+
+/*头部*/
+.m-header{width: 100%;}
+/*导航栏*/
+.m-header .fixed{position: fixed;z-index: 999;width:100%;height: 60px;background-color: #000;}
+.m-header .logo{width:200px;height:60px;background: url(../images/logo.png) no-repeat 20px 17px;cursor: pointer;}
+.m-header .nav .navli{position: relative;float: left;margin: 0 15px; height: 60px;line-height: 60px;text-align: center;color: #eee;font-size: 18px;cursor: pointer;}
+.m-header .nav a{color: #eee;font-size: 18px;}
+.m-header .dropDownList{display: none;position: absolute;top: 60px;left: -12px;width: 100px; background-color: #000;}
+.m-header .dropDownList li{color: #fff;height: 35px;line-height: 35px;}
+.m-header .dropDownList li:hover{background-color: #666;}
+.m-header .dropDownList li a{display: inline-block;width: 100%;height: 100%;font-size: 14px;text-align: left;padding-left: 15px;color: #fff;}
+.m-header .dropDownList li a:hover{color: #48b156;font-weight: bold;}
+.m-header .search{width: 230px;background-color: #1e1e1e;}
+.m-header .searchImg{display: inline-block; width:60px;height: 60px;cursor: pointer;background: url(../images/search.png) no-repeat 0px 0px;}
+.m-header .search input{width: 150px;height: 30px;margin: 13px 15px 0 0;background-color: #ccc;border-color: #ccc;font-size: 16px;text-indent: 10px;} 
+
+/*主内容区*/
+.m-content{padding-top: 60px;margin-bottom: 20px;}
+.m-content .productBackground{margin-bottom: 20px;width: 100%;height: 200px;background: url(../images/productBackground.jpg) no-repeat 0 0;}
+.m-content .productBackground img{display: block; width: 156px;height: 24px;margin: 0 auto;padding-top: 88px;}
+.m-content .myWebsite{position: relative;margin-top: 15px;width: 660px;height: 320px;border-radius: 5px;overflow: hidden;}
+.m-content .myWebsite img{-webkit-transition: all 0.6s ease-in-out;}
+.m-content .myWebsite .overLayout{position: absolute;left: 0;top: 0;width: 660px;height: 320px;}
+.m-content .myWebsite .overLayout a{display: inline-block;width: 660px;height: 320px;}
+.m-content .myWebsite .myWeb{position: absolute;bottom: 0px;width: 660px;height: 0px;opacity: 0.7;filter:alpha(opacity=70);background: #1f445e;text-align: center;}
+.m-content .myWebsite .myWeb a{display: inline-block;height: 80px;color: #fff;font: bold 16px/80px "宋体";}
+.m-content .myWebsite:hover img{-webkit-transform: scale(1.2);}
+.m-content .myWebsite:hover .overLayout{background-color: #000;opacity: 0.3;filter:alpha(opacity=30);}
+.m-content .myWebsite:hover .myWeb{height: 80px;-webkit-transition: all 0.5s ease-in-out;}
+.m-content .webNetEase{width: 375px;height: 740px;background: url(../images/phone.jpg) no-repeat 0 0;}
+.m-content .webNetEase iframe{margin: 80px 0 0 24px;width: 320px;height: 568px;}
+.m-content .netEaseJs{margin-top: 30px;}
+
+
+/*底部*/
+.m-footer{height: 150px;background-color: #363d4d;line-height: 150px;text-align: center;color: #ccc;}
+
+/*登陆*/
+.m-login{display: none;position: fixed;top: 50%;left: 50%;transform:translate(-50%,-50%); z-index: 1000;padding-left: 40px;width: 346px;height: 288px;background-color: #fff;}
+.m-login .loginClose{width: 23px;height: 22px;position: absolute;top:3px;right: 1px;cursor: pointer; background: url(../images/login_close.jpg) no-repeat right top;}
+.m-login h3{margin-top: 30px;margin-bottom: 5px;font: 18px/18px "微软雅黑";color: #444444;}
+.m-login .inputParent{position: relative;}
+.m-login label{font-size: 16px;color: #ccc;}
+.m-login input{width: 250px;height: 43px;margin-top: 15px;font-size: 16px;border: 1px solid #dfdfdf;background-color: #fafafa;text-indent: 10px;box-shadow:inset 2px 2px 2px #f1f1f1;}
+.m-login .loginBtn{background: url(../images/login_button.png) no-repeat left top;width: 293px;height: 43px;margin-top: 29px;border-width: 0px;box-shadow: 2px 2px 2px #d5e3da;}
+
+/*蒙层*/
+.m-screenTop{display: none;position: fixed;top: 0;left:0;z-index: 1000;width: 100%;height: 100%;background-color: black;opacity: 0.8;filter:alpha(opacity=80);}
+
+/*添加文章*/
+.m-addArticleBox{display: none;position: fixed;top: 0;left: 0;z-index: 1000;background-color: #fff;width: 100%;height: 100%;color: #555;}
+.m-addArticleBox .addArticleParent{width: 600px;margin: 0 auto;position: relative;padding-top: 70px;}
+.m-addArticleBox label{font: 18px/18px '宋体';color: #666;}
+.m-addArticleBox input{width: 250px;height: 25px;margin: 10px 30px 10px 10px;font: 14px/14px '宋体';}
+.m-addArticleBox select{width: 120px;height: 25px;margin: 10px 10px;font: 16px/16px '宋体';}
+.m-addArticleBox .content{margin-top: 30px;}
+.m-addArticleBox textarea{width: 100%;height: 400px;margin-top: 10px;font-size: 16px;color: #555;}
+.m-addArticleBox button{margin-top: 20px;width: 100px;height: 30px;border-width: 0px;box-shadow: 2px 2px 2px #d5e3da;color: #fff;border-radius: 2px;}
+.m-addArticleBox .addBtn{margin-left: 40px;}
+.m-addArticleBox .clearBtn{background-color: #555;}
+.m-addArticleBox .addBtn,.m-addArticleBox .leaveBtn{background-color: #21aa43;}
+.m-addArticleBox .leaveBtn{position: absolute;right: 0;top: 0;}
+

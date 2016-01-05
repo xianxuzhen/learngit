@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平居中</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		/* table*/
+		.parent1{display: table;width: 100%;table-layout: fixed;}
+		.left1,.right1{display: table-cell;background-color: #555;}
+		.left1{width: 100px;padding-right: 20px;background-color: #ccc;}
+
+		/*flex*/
+		.parent2{display: flex;}
+		.left2{width: 100px;margin-right: 20px;background-color: #ccc;}
+		.right2{flex:1;background-color: #555;}
+
+		/*float*/
+		.parent3{overflow: hidden;}
+		.left3,.right3{padding-bottom: 9999px;margin-bottom: -9999px;}
+		.left3{float: left; width: 100px; margin-right: 20px;background-color: #ccc;}
+		.right3{overflow: hidden;background-color: #555;}
+		
+
+	</style>
+</head>
+<body>
+	
+	<div class="parent1">
+		<div class="left1">
+			<p>left</p>
+		</div>
+		<div class="right1">
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="parent2">
+		<div class="left2">
+			<p>left</p>
+		</div>
+		<div class="right2">
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="parent3">
+		<div class="left3">
+			<p>left</p>
+		</div>
+		<div class="right3">
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+</body>
+</html>
