@@ -5,9 +5,9 @@ $(function(){
 	//前端之路下拉列表模块
 	(function(){
 		$(".learnWeb").hover(function(){
-			$(".dropDownList").slideDown();
+			$(".dropDownList").stop(true,false).slideDown();
 		},function(){
-			$(".dropDownList").slideUp();
+			$(".dropDownList").stop(true,false).slideUp();
 		});
 	})();
 
@@ -143,44 +143,6 @@ $(function(){
 		});
 	})();
 
-	//轮播图模块
-	(function(){
-		//自动轮播
-		var setIntervalId=setInterval(autoPlay,5000);
-		function autoPlay(){
-			$(".banner").animate({
-				left:"-1060",
-			},1000,function(){				
-				$(".banner").append($(".banner li").first().clone());
-				$(".banner li").first().remove();
-				$(".banner").css({"left":"0"});
-			});
-		}
-		//点击左边按钮
-		$(".leftBtn").click(function(){
-			clearInterval(setIntervalId);
-			$(".banner").animate({
-				left:"-1060",
-			},1000,function(){				
-				$(".banner").append($(".banner li").first().clone());
-				$(".banner li").first().remove();
-				$(".banner").css({"left":"0"});
-			});
-			setIntervalId=setInterval(autoPlay,5000);				
-		});
-		//点击右边按钮
-		$(".rightBtn").click(function(){
-			clearInterval(setIntervalId);
-			$(".banner").prepend($(".banner li").last().clone());
-			$(".banner li").last().remove();
-			$(".banner").css({"left":"-1060px"});
-			$(".banner").animate({
-				left:"0",
-			},1000);		
-			setIntervalId=setInterval(autoPlay,5000);
-		});
-	})();
-
 	//热门文章模块
 	(function(){
 		//把数据重新组合，左右文章放在一个数组中
@@ -206,6 +168,8 @@ $(function(){
 			var obj={};
 			obj.imgIndex=1;
 			obj.addArticleTtitle=hotArticleArr[i].addArticleTtitle;
+			obj.classify=hotArticleArr[i].classify;
+			obj.articleId=hotArticleArr[i].articleId;
 			obj.good=hotArticleArr[i].good;
 			obj.view=hotArticleArr[i].view;
 			innerhtml=innerhtml+util.formatTemplate(obj,HotarticleTplHtml);
@@ -233,7 +197,7 @@ $(function(){
 		if(dataSaid.length<3){
 			length=dataSaid.length;
 		}
-		for(var i=0;i<length;i++){
+		for(var i=length-1;i>=0;i--){
 			str=str+'<li><span>'+dataSaid[i].date+'</span><p>'+dataSaid[i].said+'</p></li>'
 		}
 		$(".rightBox .list").html(str);

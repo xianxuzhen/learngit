@@ -35,6 +35,7 @@
 .m-header .bannerArticle a{font-size: 26px;line-height: 26px;color: #b7c9fe;}
 .m-header .bannerArticle p{font-size: 14px;line-height: 25px;height: 100px;overflow: hidden;}
 .m-header .bannerArticleBtn{position: absolute;right: 0px;bottom: 25px;width: 120px;height: 40px;line-height: 40px;text-align: center;background-color: #838fa8;cursor: pointer;z-index: 20;}
+.m-header .bannerArticleBtn:hover{background-color: #48b156;}
 .m-header .bannerArticleBtn a{color: #fff;font-size: 16px;}
 .m-header .bannerPosition{position: relative;}
 .m-header .leftBtn,.m-header .rightBtn{position: absolute;width: 32px;height: 60px;cursor: pointer;}

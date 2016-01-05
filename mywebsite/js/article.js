@@ -8,15 +8,20 @@ $(function(){
 		var showArticleTplInnerHtml=$(".showArticleTemplate").html();
 		var showArticleBox=$(".articleBody");
 		//获取用户url传递过来的参数
-		var parameterStr=window.location.search.slice(1);
-		var arr=parameterStr.split("&");
+		var parameterStr=window.location.search;
+		var start=parameterStr.indexOf("type");
+		var str=parameterStr.slice(start);
+		console.log(str);
+		var arr=str.split("&");
 		var parameterArr=[];
 		for(var i=0;i<arr.length;i++){
 			var newArr=arr[i].split("=");
 			parameterArr.push(newArr[1]);
 		}
 		var type=parameterArr[0];
-		var articleId=parameterArr[1];		
+		var articleId=parameterArr[1];	
+		console.log(type);	
+		console.log(articleId);
 		//根据不同类目，设置显示不同类目文章
 		switch(type){
 			case "html":
@@ -71,7 +76,11 @@ $(function(){
 			obj.good=article.good;
 			obj.view=article.view;
 			var addLink=article.addLink;
-			obj.addLink=addLink.replace(/&quot;/g,'"');
+			if(obj.addLink){
+				obj.addLink=addLink.replace(/&quot;/g,'"');
+			}else{
+				obj.addLink="";
+			}			
 			var innerHtml=util.formatTemplate(obj,showArticleTplInnerHtml);
 			showArticleBox.html(innerHtml);
 		}		

@@ -86,6 +86,9 @@ $(function(){
 				obj.comments=attr[i].comments;
 				innerhtml=innerhtml+util.formatTemplate(obj,addArticleTplInnerHtml);
 			}
+			if(innerhtml==""){
+				innerhtml="刚刚做好大框架，正在努力更新中，敬请期待...";
+			}
 			articleListBox.html(innerhtml);
 		}		
 	})();
