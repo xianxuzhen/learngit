@@ -7,7 +7,10 @@ $(function(){
 	(function(){
 		//获取用户url传递过来的参数type
 		var parameterStr=window.location.search;
-		var type=parameterStr.slice(6);
+		var start=parameterStr.indexOf("type");
+		var str=parameterStr.slice(start);
+		var type=str.slice(5);
+		console.log(type);
 		//获取模板里面的html字符串
 		var addArticleTplInnerHtml=$(".addArticleTpl").html();
 		var articleListBox=$(".articleList");
