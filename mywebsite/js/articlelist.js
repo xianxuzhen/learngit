@@ -66,14 +66,14 @@ $(function(){
 		function setAddArticleListBox(type){
 			var attr=dataObj[type];
 			//默认显示5篇文章，若此类目不超过5篇，显示全部
-			var length=5;
-			if(length>attr.length){
-				length=attr.length;
-			}
+			// var length=5;
+			// if(length>attr.length){
+			// 	length=attr.length;
+			// }
 			var innerhtml="";
-			for(var i=0;i<length;i++){
+			for(var i=0;i<attr.length;i++){
 				var obj={};
-				obj.imgIndex=1;
+				obj.imgIndex=0;
 				obj.addArticleTtitle=attr[i].addArticleTtitle;
 				obj.addarticleContent=attr[i].addarticleContent;
 				obj.classify=attr[i].classify;
