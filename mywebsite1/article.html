@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学无止境 | 茫茫前端路 一直走下去...</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/article.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+</head>
+<body>
+	<!-- 头部开始 -->
+	<div class="m-header">
+		<!-- 导航栏开始 -->
+		<div class="fixed clearFix">
+			<div class="navBox comWidth">
+				<div class="logo fl"></div>
+				<ul class="nav fl">
+					<li class="navli"><a href="./index.html">首页</a></li>
+					<li class="navli learnWeb">
+						<a href="./articlelist.html?type=html">前端之路 &gt;</a>
+						<ul class="dropDownList">
+							<li><a href="./articlelist.html?type=html">Html标签</a></li>
+							<li><a href="./articlelist.html?type=css">Css样式</a></li>
+							<li><a href="./articlelist.html?type=javascript">Javascript</a></li>
+							<li><a href="./articlelist.html?type=jquery">Jquery</a></li>
+							<li><a href="./articlelist.html?type=zepto">Zepto.js</a></li>
+						</ul>
+					</li>
+					<li class="navli"><a href="./product.html">作品集</a></li>
+					<li class="navli"><a href="./articlelist.html?type=encourage">心灵鸡汤</a></li>
+					<li class="addArticleBtn navli">写文章</li>
+					<li class="navli"><a href="#">收藏资源</a></li>
+				</ul>
+				<div class="search fr ">
+					<div class="searchImg fl"></div>
+					<input class="fl" type="text">
+				</div>
+			</div>
+		</div>
+		<!-- 导航栏结束 -->
+	</div>
+	<!-- 头部结束 -->
+	<!-- 主内容区开始 -->
+	<div class="m-content clearFix">
+		<div class="parentBox comWidth">
+			<!-- 左边栏开始 -->
+			<div class="leftBox fl">
+				<div class="articleBody">
+					很抱歉，此文章暂时不能阅读.....
+					<!-- 放置文章主体的地方 -->
+				</div>
+				<!-- 文章主体模板开始 -->
+				<script type="text/template" class="showArticleTemplate">
+					<h3>{addArticleTtitle}</h3>
+					<p class="information">作者：<span>{author}</span>&nbsp;&nbsp;&nbsp;时间：<span>{date}</span>&nbsp;&nbsp;&nbsp;浏览：<span>{view}</span>&nbsp;&nbsp;&nbsp;分类：<span>{classify}</span> </p>
+					<div class="articleContent">
+						<p>{addarticleContent}</p>
+						<p class="addLink">{addLink}</p>
+					</div>
+					<div class="likes">
+						<div class="likeBtn"><a>{good}</a></div>
+					</div>
+				</script>
+				<!-- 文章主体模板结束 -->
+				<!-- 感兴趣的文章开始 -->
+				<div class="interesting">
+					<h3>你或许感兴趣的文章</h3>
+					<ul class="interestedArticleList clearFix">
+						<li>
+							<img src="./images/interesting1.jpg">
+							<p><a href="#">win7给你带来了什么？</a></p>
+						</li>
+						<li>
+							<img src="./images/interesting1.jpg">
+							<p><a href="#">win7给你带来了什么？</a></p>
+						</li>
+						<li>
+							<img src="./images/interesting1.jpg">
+							<p><a href="#">win7给你带来了什么？</a></p>
+						</li>
+						<li>
+							<img src="./images/interesting1.jpg">
+							<p><a href="#">win7给你带来了什么？</a></p>
+						</li>
+					</ul>
+				</div>
+				<!-- 感兴趣的文章结束 -->
+				<!-- 评论开始 -->
+				<div class="idea">
+					<h4>请留下您的评论：</h4>
+					<form>
+						<div class="inputBox clearFix">
+							<div><label for="author">昵称：</label><input type="text" id="author"></div>
+							<div><label for="author">邮箱：</label><input type="text" id="email"></div>
+							<div><label for="author">网址：</label><input type="text" id="url"></div>
+						</div>
+						<textarea placeholder="输入评论内容..."></textarea>
+						<div class="ideaBtn">提交评论</div>			
+					</form>					
+				</div>
+				<!-- 评论结束 -->
+			</div>
+			<!-- 左边栏结束 -->
+			<!-- 右边栏开始 -->
+			<div class="rightBox fr">
+				<!-- 热门文章开始 -->
+				<div class="hotArticle">
+					<h3><a href="#" class="hotTitle">最新文章</a></h3>
+					<div class="hotarticleListBox">
+						<ul class="hotarticleList">
+							<!-- 填充热门文章的地方 -->	
+						</ul>
+					</div>					
+					<!-- 热门文章列表数据模板开始 -->
+					<script type="text/template" class="hotarticleTpl">
+						<li class="clearFix item">
+							<img class="fl" src="./images/hot{imgIndex}.jpg">
+							<div class="articleDescribe fl">
+								<h4><a href="./article.html?type={classify}&articleId={articleId}">{addArticleTtitle}</a></h4>
+								<ul class="hotCommentsBox">
+									<li><span class="hotgood">{good}</span></li>
+									<li><span class="hotredading">{view}</span></li>
+								</ul>
+							</div>
+						</li>
+					</script>
+					<!-- 热门文章列表数据模板结束 -->
+				</div>
+				<!-- 热门文章结束-->
+				<!-- 网站标签开始 -->
+				<div class="webLable clearFix">
+					<h3><a href="#" class="webLableTitle">网站标签</a></h3>
+					<ul>
+						<li><a href="#">前端开发</a></li>
+						<li><a href="#">Html标签</a></li>
+						<li><a href="#">Css样式</a></li>
+						<li><a href="#">Javascript</a></li>
+						<li><a href="#">Jquery</a></li>
+						<li><a href="#">资源分享</a></li>
+						<li><a href="#">励志故事</a></li>
+						<li><a href="#">前进</a></li>
+					</ul>
+				</div>
+				<!-- 网站标签结束 -->
+			</div>
+			<!-- 右边栏结束 -->
+		</div>
+	</div>
+	<!-- 主内容区结束 -->
+	<!-- 底部开始 -->
+	<div class="m-footer">
+		© 2015-2016 FOCUS – 学无止境 | 茫茫前端路 ALL RIGHTS RESERVED   /   THEME BY MUGEE & MUFENG
+	</div>
+	<!-- 底部结束 -->
+		<!-- 蒙层 -->
+	<div class="m-screenTop"></div>
+	<!-- 登陆开始 -->
+	<div class="m-login">
+		<form id="loginForm">
+			<div class="loginClose"></div>
+			<h3>请登录：</h3>
+			<div class="inputParent">
+				<label  for="userName">账号:</label>
+				<input id="userName" name="userName" type="text" class="username">
+			</div>	
+			<div class="inputParent">
+				<label for="password">密码:</label>
+				<input id="password" name="password" type="password" class="password">
+			</div>
+			<div class="loginBtn"></div>
+		</form>
+	</div>
+	<!-- 登陆结束 -->
+	<!-- 添加文章开始 -->
+	<div class="m-addArticleBox">
+		<div class="addArticleParent">
+			<form class="addForm">
+				<button class="leaveBtn">退出</button>
+				<label>标题:</label><input class="addArticleTtitle" type="text">
+				<label>文章分类：</label>
+				<select class="classify">
+					<option>html</option>
+					<option>css</option>
+					<option>javascript</option>
+					<option>jquery</option>
+					<option>zepto</option>
+					<option>git</option>
+					<option>flex</option>
+					<option>layout</option>
+					<option>encourage</option>
+				</select>
+				<br><br>
+				<label>内容：</label>
+				<textarea class="addarticleContent"></textarea>
+				<button class="clearBtn">重置</button>
+				<button class="addBtn">确定</button>
+			</form>			
+		</div>		
+	</div>
+	<!-- 添加文章结束 -->	
+
+	<script type="text/javascript" src="./js/data.js"></script>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/util.js"></script>
+	<script type="text/javascript" src="./js/comment.js"></script>
+	<script type="text/javascript" src="./js/article.js"></script>
+</body>
+</html>

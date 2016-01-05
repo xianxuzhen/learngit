@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平居中</title>
+	<style type="text/css">
+		body,html{margin: 0;padding: 0;}
+		.parent{width: 960px;margin: 0 auto;background-color: #ccc;}
+		.side{width: 300px;height: 500px; float: left; background-color: blue;}
+		.main{width: 650px;height: 500px;margin-left: 310px; background-color: red;}
+		@media screen and (max-width: 1000px) and (min-width: 400px){
+			.parent{width: auto;}
+			.main{width: auto; overflow: hidden;}
+		}
+		@media screen and (max-width: 400px){
+			.parent{width: auto;}
+			.side{float: none;width: auto;}
+			.main{margin: 0;width: auto;}
+
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="parent">
+		<div class="side"></div>
+    	<div class="main"></div>
+	</div>
+
+</body>
+</html>

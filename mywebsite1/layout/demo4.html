@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title> 
+    <style type="text/css">
+    	*{margin: 0;padding: 0;}
+    	/* float+margin  不足：当right中子元素有清楚浮动时，会对布局有影响  margin-right: -100px;兼容IE6*/
+    	.left1{float: left;width: 100px; background-color: #ccc;margin-right: -100px;}
+    	.right1{margin-left: 120px; background-color: #555;}
+
+		/* float+margin+(fix) 第一个方案的改进，right中有浮动子元素，不影响。兼容IE6*/
+    	.left2{float: left;width: 100px;position: relative; background-color: #ccc;}
+		.right-fix{float: right;width: 100%;margin-left:-100px; }
+    	.right2{margin-left: 120px; background-color: #555;}
+
+		/* float+hidden  不支持IE6*/
+		.left3{float: left;width: 100px;margin-right: 20px;background-color: #ccc;}
+		.right3{overflow: hidden; background-color: #555;}
+
+		/* table  */
+		.parent4{display: table;width: 100%;}
+		.left4,.right4{display: table-cell;background-color: #555;}
+		.left4{width: 100px;padding-right: 20px;background-color: #ccc;}
+
+		/* flex  兼容性差*/
+		.parent5{display: flex;}
+		.left5{width: 100px;margin-right: 20px;background-color: #ccc;}
+		.right5{flex:1;background-color: #555;}
+
+		/* 两列定宽+一列自适应，方法跟上面一样，增加的列样式和左列一样*/
+    	.left6,.middle6{float: left;width: 100px; background-color: #ccc;margin-right: 20px;}
+    	.middle6{margin-right: -100px;}
+    	.right6{margin-left: 240px; background-color: #555;}
+
+
+
+    </style>
+</head>
+<body>
+
+	<div>
+		<div class="left1">
+			<p>left</p>
+		</div>
+		<div class="right1">
+			<p class="p1">right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<br>
+
+	<div>
+		<div class="left2">
+			<p>left</p>
+		</div>
+		<div class="right-fix">
+			<div class="right2">
+				<p class="p2">right</p>
+				<p>right</p>
+				<p>right</p>
+			</div>
+		</div>	
+	</div>
+
+	<div style="clear:both;"><br></div>
+
+	<div>
+		<div class="left3">
+			<p>left</p>
+		</div>
+		<div class="right3">
+			<p class="p3">right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<div style="clear:both;"><br></div>
+
+	<div class="parent4">
+		<div class="left4">
+			<p>left</p>
+		</div>
+		<div class="right4">
+			<p class="p4">right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<div style="clear:both;"><br></div>
+
+	<div class="parent5">
+		<div class="left5">
+			<p>left</p>
+		</div>
+		<div class="right5">
+			<p class="p5">right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+
+	<div style="clear:both;"><br></div>
+
+	<div>
+		<div class="left6">
+			<p>left</p>
+		</div>
+		<div class="middle6">
+			<p>left</p>
+		</div>
+		<div class="right6">
+			<p class="p6">right</p>
+			<p>right</p>
+			<p>right</p>
+		</div>
+	</div>
+	
+</body>
+</html>

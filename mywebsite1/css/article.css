@@ -1,0 +1,28 @@
+.m-content{padding-top: 60px;}
+/*文章主体*/
+.m-content .articleBody{margin-bottom: 30px;padding: 20px;background-color: #fff;border-radius: 5px;}
+.m-content .articleBody h3{font:24px/24px "宋体";color: #333;margin-bottom: 18px;}
+.m-content .information{font: 12px/12px "宋体";color: #999;margin-bottom: 25px;}
+.m-content .articleContent p{font: 15px/30px "宋体";color: #555;word-break: break-all; word-wrap:break-word;}
+.m-content .articleContent p.addLink{margin: 30px 0px 30px 30px;}
+.m-content .articleContent p.addLink a{color: green;text-decoration: underline;font-size: 18px;}
+.m-content .likes{position: relative;margin-top: 20px;height: 40px;border-top: 1px solid #ccc;}
+.m-content .likeBtn{position: absolute;right: 20px;top: 18px; width: 80px;height: 24px;border-radius: 13px;border: 1px solid #ccc;text-align: center;}
+.m-content .likeBtn a{padding: 2px 0px 2px 30px; height: 24px;line-height: 24px;background: url(../images/zan.png) no-repeat 0 0;color: #999;}
+/*感兴趣的文章*/
+.m-content .interesting{margin-bottom: 30px;padding: 20px;background-color: #fff;}
+.m-content .interesting  h3{font:24px/24px "宋体";color: #333;margin-bottom: 20px;}
+.m-content .interestedArticleList{margin-left: -20px;}
+.m-content .interestedArticleList li{float: left;margin-left: 20px;}
+.m-content .interesting  img{margin-bottom: 10px;width: 150px;height: 100px;}
+.m-content .interesting p{text-align: center;}
+.m-content .interesting p a{color: #888;}
+/*评论*/
+.m-content .idea{position: relative;padding-bottom:100px;}
+.m-content .idea h4{font:16px/16px "宋体";color: #555;margin-bottom: 20px;}
+.m-content .inputBox{margin-left: -20px;margin-bottom: 20px;}
+.m-content .inputBox div{float: left;width: 220px;height: 38px;margin-left: 20px;}
+.m-content .inputBox label{display: inline-block;height: 38px;line-height: 38px;width: 60px;text-align: center;background-color: #fff;color: #999;}
+.m-content .idea input{width: 160px;height: 38px;border-radius: 3px;border-style: none;color: #666;}
+.m-content .idea textarea{padding: 10px;width: 680px;height: 120px;border-radius: 3px;border-color: #fff;}
+.m-content .ideaBtn{position: absolute;right: 0;bottom: 20px;width: 170px;height: 50px;background-color: #b2b2b2;line-height: 50px;text-align: center;font-size: 16px;color: #fff;cursor: pointer;}

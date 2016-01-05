@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学无止境 | 茫茫前端路 一直走下去...</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/product.css">
+</head>
+<body>
+	<!-- 头部开始 -->
+	<div class="m-header">
+		<!-- 导航栏开始 -->
+		<div class="fixed clearFix">
+			<div class="navBox comWidth">
+				<div class="logo fl"></div>
+				<ul class="nav fl">
+					<li class="navli"><a href="./index.html">首页</a></li>
+					<li class="navli learnWeb">
+						<a href="./articlelist.html?type=html">前端之路 &gt;</a>
+						<ul class="dropDownList">
+							<li><a href="./articlelist.html?type=html">Html标签</a></li>
+							<li><a href="./articlelist.html?type=css">Css样式</a></li>
+							<li><a href="./articlelist.html?type=javascript">Javascript</a></li>
+							<li><a href="./articlelist.html?type=jquery">Jquery</a></li>
+							<li><a href="./articlelist.html?type=zepto">Zepto.js</a></li>
+						</ul>
+					</li>
+					<li class="navli"><a href="./product.html">作品集</a></li>
+					<li class="navli"><a href="./articlelist.html?type=encourage">心灵鸡汤</a></li>
+					<li class="addArticleBtn navli">写文章</li>
+					<li class="navli"><a href="#">收藏资源</a></li>
+				</ul>
+				<div class="search fr ">
+					<div class="searchImg fl"></div>
+					<input class="fl" type="text">
+				</div>
+			</div>
+		</div>
+		<!-- 导航栏结束 -->
+	</div>
+	<!-- 头部结束 -->
+	<!-- 主内容区开始 -->
+	<div class="m-content clearFix">
+		<!-- 背景图片开始 -->
+		<div class="productBackground">
+			<img src="./images/logo.png">
+		</div>
+		<!-- 背景图片结束 -->
+		<div class="parentBox comWidth clearFix">
+			<div class="myWebsite  fl">
+				<img src="./images/myWebsite.jpg">
+				<div class="overLayout"><a href="./index.html" target="_blank"></a></div>
+				<div class="myWeb"><a href="./index.html" target="_blank">学无止境|漫漫前端路，一直走下去- - -我的个人网站</a></div>
+			</div>
+			<div class="webNetEase fr">
+				<iframe src="http://htmlpreview.github.io/?https://github.com/xianxuzhen/learngit/blob/master/neteat/index.html"></iframe>
+			</div>
+			<div class="myWebsite netEaseJs fl">
+				<img src="./images/netEase.jpg">
+				<div class="overLayout"><a href="http://htmlpreview.github.io/?https://github.com/xianxuzhen/learngit/blob/master/netpc/index.html" target="_blank"></a></div>
+				<div class="myWeb"><a href="http://htmlpreview.github.io/?https://github.com/xianxuzhen/learngit/blob/master/netpc/index.html" target="_blank">知识改变世界，教育改变命运，遇见更好的自己- - - 网易前端教育部</a></div>
+			</div>
+		</div>
+	</div>
+	<!-- 主内容区结束 -->
+	<!-- 底部开始 -->
+	<div class="m-footer">
+		© 2015-2016 FOCUS – 学无止境 | 茫茫前端路 ALL RIGHTS RESERVED   /   THEME BY MUGEE & MUFENG
+	</div>
+	<!-- 底部结束 -->
+		<!-- 蒙层 -->
+	<div class="m-screenTop"></div>
+	<!-- 登陆开始 -->
+	<div class="m-login">
+		<form id="loginForm">
+			<div class="loginClose"></div>
+			<h3>请登录：</h3>
+			<div class="inputParent">
+				<label  for="userName">账号:</label>
+				<input id="userName" name="userName" type="text" class="username">
+			</div>	
+			<div class="inputParent">
+				<label for="password">密码:</label>
+				<input id="password" name="password" type="password" class="password">
+			</div>
+			<div class="loginBtn"></div>
+		</form>
+	</div>
+	<!-- 登陆结束 -->
+	<!-- 添加文章开始 -->
+	<div class="m-addArticleBox">
+		<div class="addArticleParent">
+			<form class="addForm">
+				<button class="leaveBtn">退出</button>
+				<label>标题:</label><input class="addArticleTtitle" type="text">
+				<label>文章分类：</label>
+				<select class="classify">
+					<option>html</option>
+					<option>css</option>
+					<option>javascript</option>
+					<option>jquery</option>
+					<option>zepto</option>
+					<option>git</option>
+					<option>flex</option>
+					<option>layout</option>
+					<option>encourage</option>
+				</select>
+				<br><br>
+				<label>内容：</label>
+				<textarea class="addarticleContent"></textarea>
+				<button class="clearBtn">重置</button>
+				<button class="addBtn">确定</button>
+			</form>			
+		</div>		
+	</div>
+	<!-- 添加文章结束 -->
+	
+	<script type="text/javascript" src="./js/data.js"></script>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/util.js"></script>
+	<script type="text/javascript" src="./js/comment.js"></script>
+	
+</body>
+</html>
