@@ -75,8 +75,8 @@ $(function(){
 			obj.date=article.date;
 			obj.good=article.good;
 			obj.view=article.view;
-			var addLink=article.addLink;
 			if(article.addLink){
+				var addLink=article.addLink;
 				obj.addLink=addLink.replace(/&quot;/g,'"');
 			}else{
 				obj.addLink="";
