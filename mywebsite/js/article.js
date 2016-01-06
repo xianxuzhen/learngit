@@ -76,7 +76,7 @@ $(function(){
 			obj.good=article.good;
 			obj.view=article.view;
 			var addLink=article.addLink;
-			if(obj.addLink){
+			if(article.addLink){
 				obj.addLink=addLink.replace(/&quot;/g,'"');
 			}else{
 				obj.addLink="";
