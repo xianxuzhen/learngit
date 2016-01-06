@@ -86,7 +86,7 @@ $(function(){
 				innerhtml=innerhtml+util.formatTemplate(obj,addArticleTplInnerHtml);
 			}
 			if(innerhtml==""){
-				innerhtml="刚刚做好大框架，正在努力更新中，敬请期待...";
+				innerhtml="正在努力更新中，敬请期待...";
 			}
 			articleListBox.html(innerhtml);
 		}		
@@ -164,11 +164,16 @@ $(function(){
 					obj.articleId=attr[i].articleId;
 					obj.good=attr[i].good;
 					obj.view=attr[i].view;
-					obj.comments=attr[i].comments;
+					var addLink=article.addLink;
+					if(obj.addLink){
+						obj.addLink=addLink.replace(/&quot;/g,'"');
+					}else{
+						obj.addLink="";
+					}			
 					innerhtml=innerhtml+util.formatTemplate(obj,addArticleTplInnerHtml);
 				}
 				if(innerhtml==""){
-					innerhtml="刚刚做好大框架，正在努力更新中，敬请期待...";
+					innerhtml="正在努力更新中，敬请期待...";
 				}
 				articleListBox.html(innerhtml);
 			}		
