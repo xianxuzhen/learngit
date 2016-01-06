@@ -164,8 +164,8 @@ $(function(){
 					obj.articleId=attr[i].articleId;
 					obj.good=attr[i].good;
 					obj.view=attr[i].view;
-					var addLink=article.addLink;
-					if(obj.addLink){
+					if(attr[i].addLink){
+						var addLink=attr[i].addLink;
 						obj.addLink=addLink.replace(/&quot;/g,'"');
 					}else{
 						obj.addLink="";
