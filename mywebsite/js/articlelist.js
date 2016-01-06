@@ -31,17 +31,17 @@ $(function(){
 				$(".category li").eq(4).addClass("default");
 				setAddArticleListBox("jquery");
 				break;
-			case "zepto":
-				$(".category li").eq(5).addClass("default");
-				setAddArticleListBox("zepto");
-				break;
 			case "layout":
-				$(".category li").eq(6).addClass("default");
+				$(".category li").eq(5).addClass("default");
 				setAddArticleListBox("layout");
 				break;
 			case "flex":
-				$(".category li").eq(7).addClass("default");
+				$(".category li").eq(6).addClass("default");
 				setAddArticleListBox("flex");
+				break;
+			case "zepto":
+				$(".category li").eq(7).addClass("default");
+				setAddArticleListBox("zepto");
 				break;
 			case "git":
 				$(".category li").eq(8).addClass("default");

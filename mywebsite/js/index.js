@@ -76,7 +76,7 @@ $(function(){
 		//获取模板里面的html字符串
 		var articleListTplHtml=$(".articleListTpl").html();
 		var articleListBox=$(".articleList");
-		var attr=dataObj["layout"];
+		var attr=dataObj["html"];
 		//默认显示5篇文章，若此类目不超过5篇，显示全部
 		var length=5;
 		if(length>attr.length){
