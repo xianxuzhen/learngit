@@ -52,8 +52,8 @@
 				<div class="overLayout"><a href="./index.html" target="_blank"></a></div>
 				<div class="myWeb"><a href="./index.html" target="_blank">学无止境|漫漫前端路，一直走下去- - -我的个人网站</a></div>
 			</div>
-			<div class="webNetEase fr">
-				<iframe src="http://htmlpreview.github.io/?https://github.com/xianxuzhen/learngit/blob/master/neteat/index.html"></iframe>
+			<div class="webNetEase fr" id="webNetEase">
+				
 			</div>
 			<div class="myWebsite netEaseJs fl">
 				<img src="./images/netEase.jpg">
@@ -119,6 +119,10 @@
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/util.js"></script>
 	<script type="text/javascript" src="./js/comment.js"></script>
+	<script type="text/javascript">
+		var iframeBox=document.getElementById("webNetEase");
+		iframeBox.innerHTML='<iframe src="http://htmlpreview.github.io/?https://github.com/xianxuzhen/learngit/blob/master/neteat/index.html"></iframe>';
+	</script>
 	
 </body>
 </html>
