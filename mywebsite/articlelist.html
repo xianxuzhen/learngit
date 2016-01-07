@@ -168,27 +168,33 @@
 	<!-- 添加文章开始 -->
 	<div class="m-addArticleBox">
 		<div class="addArticleParent">
-			<form class="addForm">
-				<button class="leaveBtn">退出</button>
-				<label>标题:</label><input class="addArticleTtitle" type="text">
-				<label>文章分类：</label>
-				<select class="classify">
-					<option>html</option>
-					<option>css</option>
-					<option>javascript</option>
-					<option>jquery</option>
-					<option>zepto</option>
-					<option>git</option>
-					<option>flex</option>
-					<option>layout</option>
-					<option>encourage</option>
-				</select>
-				<br><br>
-				<label>内容：</label>
-				<textarea class="addarticleContent"></textarea>
-				<button class="clearBtn">重置</button>
-				<button class="addBtn">确定</button>
-			</form>			
+			<!-- <form class="addForm"> -->
+			<button class="leaveBtn">退出</button>
+			<label>标题:</label><input class="addArticleTtitle" type="text">
+			<label>文章分类：</label>
+			<select class="classify">
+				<option>html</option>
+				<option>css</option>
+				<option>javascript</option>
+				<option>dom</option>
+				<option>jquery</option>
+				<option>zepto</option>
+				<option>git</option>
+				<option>flex</option>
+				<option>layout</option>
+				<option>buildWebsite</option>
+				<option>resources</option>
+				<option>encourage</option>
+				<option>noCategory</option>
+			</select>
+			<br><br>
+			<label>内容：</label>
+			<textarea class="addarticleContent"></textarea>
+			<label>链接：</label>
+			<textarea class="addLink"></textarea>
+			<button class="clearBtn">重置</button>
+			<button class="addBtn">确定</button>
+			<!-- </form>	 -->		
 		</div>		
 	</div>
 	<!-- 添加文章结束 -->
@@ -196,8 +202,8 @@
 	<div class="m-white">
 		<div class="whiteClose"></div>
 		<p class="title">记录此刻的心情...</p>
-		<p><input></p>		
-		<div class="fr">发表</div>
+		<p><input class="whiteContent"></p>		
+		<div class="fr whiteBtn">发表</div>
 	</div>
 	<!-- 写说说结束 -->
 	

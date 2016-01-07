@@ -84,7 +84,7 @@ $(function(){
 					addArticleObject.articleId=dataObj["javascript"].length;
 					dataObj.javascript.push(addArticleObject);
 					break;
-				case "javascript":
+				case "dom":
 					addArticleObject.articleId=dataObj["dom"].length;
 					dataObj.dom.push(addArticleObject);
 					break;
