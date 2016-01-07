@@ -27,40 +27,44 @@ $(function(){
 				$(".category li").eq(3).addClass("default");
 				setAddArticleListBox("javascript");
 				break;
-			case "jquery":
+			case "dom":
 				$(".category li").eq(4).addClass("default");
+				setAddArticleListBox("dom");
+				break;
+			case "jquery":
+				$(".category li").eq(5).addClass("default");
 				setAddArticleListBox("jquery");
 				break;
 			case "layout":
-				$(".category li").eq(5).addClass("default");
+				$(".category li").eq(6).addClass("default");
 				setAddArticleListBox("layout");
 				break;
 			case "flex":
-				$(".category li").eq(6).addClass("default");
+				$(".category li").eq(7).addClass("default");
 				setAddArticleListBox("flex");
 				break;
 			case "zepto":
-				$(".category li").eq(7).addClass("default");
+				$(".category li").eq(8).addClass("default");
 				setAddArticleListBox("zepto");
 				break;
 			case "git":
-				$(".category li").eq(8).addClass("default");
+				$(".category li").eq(9).addClass("default");
 				setAddArticleListBox("git");
 				break;
 			case "buildWebsite":
-				$(".category li").eq(9).addClass("default");
+				$(".category li").eq(10).addClass("default");
 				setAddArticleListBox("buildWebsite");
 				break;
 			case "resources":
-				$(".category li").eq(10).addClass("default");
+				$(".category li").eq(11).addClass("default");
 				setAddArticleListBox("resources");
 				break;									
 			case "encourage":
-				$(".category li").eq(11).addClass("default");
+				$(".category li").eq(12).addClass("default");
 				setAddArticleListBox("encourage");
 				break;
 			case "noCategory":
-				$(".category li").eq(12).addClass("default");
+				$(".category li").eq(13).addClass("default");
 				setAddArticleListBox("noCategory");
 				break;
 		};
@@ -114,40 +118,44 @@ $(function(){
 					$(".category li").eq(3).addClass("default");
 					setAddArticleListBox("javascript");
 					break;
-				case "jquery":
+				case "dom":
 					$(".category li").eq(4).addClass("default");
+					setAddArticleListBox("dom");
+					break;
+				case "jquery":
+					$(".category li").eq(5).addClass("default");
 					setAddArticleListBox("jquery");
 					break;
 				case "zepto":
-					$(".category li").eq(5).addClass("default");
+					$(".category li").eq(6).addClass("default");
 					setAddArticleListBox("zepto");
 					break;
 				case "layout":
-					$(".category li").eq(6).addClass("default");
+					$(".category li").eq(7).addClass("default");
 					setAddArticleListBox("layout");
 					break;
 				case "flex":
-					$(".category li").eq(7).addClass("default");
+					$(".category li").eq(8).addClass("default");
 					setAddArticleListBox("flex");
 					break;
 				case "git":
-					$(".category li").eq(8).addClass("default");
+					$(".category li").eq(9).addClass("default");
 					setAddArticleListBox("git");
 					break;
 				case "buildWebsite":
-					$(".category li").eq(9).addClass("default");
+					$(".category li").eq(10).addClass("default");
 					setAddArticleListBox("buildWebsite");
 					break;
 				case "resources":
-					$(".category li").eq(10).addClass("default");
+					$(".category li").eq(11).addClass("default");
 					setAddArticleListBox("resources");
 					break;									
 				case "encourage":
-					$(".category li").eq(11).addClass("default");
+					$(".category li").eq(12).addClass("default");
 					setAddArticleListBox("encourage");
 					break;
 				case "noCategory":
-					$(".category li").eq(12).addClass("default");
+					$(".category li").eq(13).addClass("default");
 					setAddArticleListBox("noCategory");
 					break;
 			};

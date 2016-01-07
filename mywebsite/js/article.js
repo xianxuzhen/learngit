@@ -33,6 +33,9 @@ $(function(){
 			case "javascript":
 				setArticleBox("javascript",articleId);
 				break;
+			case "dom":
+				setArticleBox("dom",articleId);
+				break;
 			case "jquery":
 				setArticleBox("jquery",articleId);
 				break;
