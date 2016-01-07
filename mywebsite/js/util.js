@@ -54,6 +54,12 @@
           if(w=='"'){
             w="&quot;";
           }
+          if(w=="'"){
+            w="&quot;";
+          }
+          if(w=="\\"){
+            w="&#92;";
+          }
     			arr[i]=w;
     		}
     		return arr.join('');
