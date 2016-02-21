@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分页器</title>
+	<link rel="stylesheet" type="text/css" href="css/ComboBox.css">
+</head>
+<body>
+
+	
+	<br>
+	<h4>下面例子参数配置例子在本页文档最后</h4>
+	
+	<div class="comboBox1"></div>
+	<div class="comboBox2"></div>
+
+	<script type="text/javascript" src="js/require.js" data-main="js/main"></script>
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	
+
+	<div>
+		<h2>实现简单的分页组件，点击可以切换并获取当前页码</h2>
+		<h3>参考手册</h3>
+		<!-- 配置参数 -->
+		<h4>参数配置:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">options.container : object</p>
+				<p style="text-indent:30px;">
+					最外层容器，用于包含组件				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.items : Array</p>
+				<p style="text-indent:30px;">
+					组合框下拉菜单的数据，每项由value和content组成，例如：[{content:"北京",value:"beijing"}]，默认为：[]。
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.readonly : Boolean</p>
+				<p style="text-indent:30px;">
+					输入框是否可以编辑输入，默认为false：可以编辑。			
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.boxWidth : Number或String</p>
+				<p style="text-indent:30px;">
+					组合框的宽度，默认100%。
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.originIndex : Number</p>
+				<p style="text-indent:30px;">
+					初始化后默认选中的值的索引，默认0。				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.skinClassName : String</p>
+				<p style="text-indent:30px;">
+					换肤时的类名		
+				</p>
+			</li>
+		</ul>
+		<!-- 组件方法 -->
+		<h4>组件方法:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">getselectContent</p>
+				<p style="text-indent:30px;">
+					获得选中项的content值，若输入框的中的值不在下拉菜单中，则返回输入框中的值。		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">getSelectIndex</p>
+				<p style="text-indent:30px;">
+					获得选中项的索引值，若输入框的中的值不在下拉菜单中，则返回-1.		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">reset</p>
+				<p style="text-indent:30px;">
+					将组合框重置		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">disable</p>
+				<p style="text-indent:30px;">
+					设置组合框为不可用状态。		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">enable</p>
+				<p style="text-indent:30px;">
+					设置组合框为可用状态		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">setWidth</p>
+				<p style="text-indent:30px;">
+					设置组合框的宽度		
+				</p>
+			</li>
+		</ul>
+		<!-- 组件事件 -->
+		<h4>组件事件:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">beforeshow</p>
+				<p style="text-indent:30px;">
+					下拉菜单试图展示时触发
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">aftershow</p>
+				<p style="text-indent:30px;">
+					下拉菜单展示后触发
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">beforeselectitem</p>
+				<p style="text-indent:30px;">
+					点击下拉菜单某项前触发
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+							<p style="text-indent:30px;">参数2: {Function}</p>
+							<p style="text-indent:30px;">促发事件后调用的函数.函数参数为：点击前选择框里面的内容</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">afterselectitem</p>
+				<p style="text-indent:30px;">
+					点击下拉菜单某项后触发
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+							<p style="text-indent:30px;">参数2: {Function}</p>
+							<p style="text-indent:30px;">促发事件后调用的函数.函数参数为：点击后选择框里面的内容</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">beforehide</p>
+				<p style="text-indent:30px;">
+					列表隐藏前促发
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">afterhide</p>
+				<p style="text-indent:30px;">
+					列表隐藏后促发
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			
+		</ul>
+		<h4>第一个分页器参数配置如下：</h4>
+		<img src="./images/01.png">
+		<h4>第二个分页器参数配置如下：</h4>
+		<img src="./images/02.png">
+	
+	</div>
+	
+		
+</body>
+</html>

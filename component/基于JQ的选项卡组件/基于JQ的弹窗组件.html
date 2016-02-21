@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹窗组件</title>
+	<link rel="stylesheet" type="text/css" href="css/tab.css">
+</head>
+<body>
+	<div class="parent1"></div>
+	<div class="parent2" style="margin-top:20px;"></div>
+	<script type="text/javascript" src="js/require.js" data-main="js/main"></script>
+	<br>
+	<br>
+	<div>
+		<h2>选项卡组件：通过选中不同的标题切换相应的内容，支持鼠标悬停或者点击两种方式切换。</h2>
+		<h3>参考手册</h3>
+		<!-- 配置参数 -->
+		<h4>参数配置:</h4>
+		<ul>
+			<li>
+				<p>options.items : Array</p>
+				<p style="text-indent:30px;">
+					数据格式：[{title:"title1",content:"content1"},{title:"title2",content:"content2"},{title:"title3",content:"content3"},...]					
+				</p>
+			</li>
+			<li>
+				<p>options.eventType : String</p>
+				<p style="text-indent:30px;">
+					触发选项卡切换的事件名称,取值click或mouseover，默认click				
+				</p>
+			</li>
+			<li>
+				<p>options.selectDelay : Number</p>
+				<p style="text-indent:30px;">
+					当selectEvent是mouseover时，选项卡之间切换的延迟时间，以毫秒为单位，默认0				
+				</p>
+			</li>
+			<li>
+				<p>options.defaultIndex : Number</p>
+				<p style="text-indent:30px;">
+					默认选项卡的打开项，默认0				
+				</p>
+			</li>
+			<li>
+				<p>options.skinClassName : String</p>
+				<p style="text-indent:30px;">
+					给选项卡更换样式的类名，默认为""，写法请参考tab.css文件				
+				</p>
+				<img src="./images/class.png">
+			</li>
+		</ul>
+		<!-- 组件方法 -->
+		<h4>组件方法:</h4>
+		<ul>
+			<li>
+				<p>render</p>
+				<p style="text-indent:30px;">
+					将Tab选择卡渲染到指定的容器中
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">target: {HTMLElement}</p>
+							<p style="text-indent:30px;">一个用来渲染组件的容器对象.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p>select</p>
+				<p style="text-indent:30px;">
+					切换到某个选项卡
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">index: {Number}</p>
+							<p style="text-indent:30px;">选项卡的索引，初始值是0.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p>getCurrentTitle</p>
+				<p style="text-indent:30px;">
+					获得当前选项卡的标题
+					<ul>
+						<li>
+							<span>返回值:</span>
+							<p style="text-indent:30px;">返回值: {String}</p>
+							<p style="text-indent:30px;">取得当前选中项的标题.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p>getCurrentContent</p>
+				<p style="text-indent:30px;">
+					获得当前选项卡的内容
+					<ul>
+						<li>
+							<span>返回值:</span>
+							<p style="text-indent:30px;">返回值: {String}</p>
+							<p style="text-indent:30px;">取得当前选中项的内容.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+		</ul>
+		<!-- 组件事件 -->
+		<h4>组件事件:</h4>
+		<ul>
+			<li>
+				<p>onbeforeselect</p>
+				<p style="text-indent:30px;">
+					当焦点发生改变之前触发该事件
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+							<p style="text-indent:30px;">参数2: {Function}</p>
+							<p style="text-indent:30px;">促发事件后调用的函数.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p>onafterselect</p>
+				<p style="text-indent:30px;">
+					当焦点发生改变之后触发该事件
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+							<p style="text-indent:30px;">参数2: {Function}</p>
+							<p style="text-indent:30px;">促发事件后调用的函数.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+		</ul>
+	</div>
+	<h3>使用实例：</h3>
+	<img src="./images/main.png">
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

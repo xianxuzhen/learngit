@@ -1,0 +1,24 @@
+html,body,input,ul,li{margin: 0;padding: 0;}
+ul,li{list-style: none;}
+.optiontitle{font-weight: bold;}
+
+
+.comboBox1,.comboBox2{margin: 30px;float: left;width: 200px;}
+
+
+.comboBox_container{position: relative;width: 100%;height: 30px;border: 1px solid #ccc;}
+.comboBox_inputBox{position: relative;}
+.comboBox_input{width: 100%;height: 30px;border: 0;padding: 0px 40px 0px 10px;box-sizing:border-box;}
+.comboBox_btn{position: absolute;right: 0;top: 1px; width: 23px;height: 23px;margin: 2px;border-left: 1px solid #ccc;background: url(../images/magic-combobox-arrow.gif) no-repeat 0 0;cursor: pointer;}
+.comboBox_btn:hover{background: url(../images/magic-combobox-arrow.gif) no-repeat -23px 0;}
+.comboBox_btn.active{border: 1px solid #888;}
+.comboBox_listBox{display: none;position: absolute;left: 0;top: 30px;width: 100%;background-color: #fff;border: 1px solid #ddd;box-sizing:border-box;overflow: auto;}
+.comboBox_listBox li{text-indent: 10px;width: 100%;height: 30px;line-height: 30px;font-size: 12px;}
+.comboBox_listBox li:hover{background-color: #555;color: #fff;cursor: pointer;}
+
+
+.skin_a.comboBox_container{position: relative;width: 100%;height: 30px;border: 1px solid red;}
+.skin_a .comboBox_input{color: red;}
+.skin_a .comboBox_btn{border-left: 1px solid red;}
+.skin_a .comboBox_btn.active{border: 1px solid #888;}
+.skin_a .comboBox_listBox{background-color: #fff;border: 1px solid red;color: red;}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分页器</title>
+	<link rel="stylesheet" type="text/css" href="css/pager.css">
+</head>
+<body>
+
+	<h4>下面例子参数配置例子在文档最后</h4>
+	<br><br><br>
+
+	<div class="pager1"></div>
+	<br><br><br><br><br><br>
+	<div class="pager2"></div>
+
+	<script type="text/javascript" src="js/require.js" data-main="js/main"></script>
+	
+	<br><br><br>
+	
+
+	<div>
+		<h2>实现简单的分页组件，点击可以切换并获取当前页码</h2>
+		<h3>参考手册</h3>
+		<!-- 配置参数 -->
+		<h4>参数配置:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">options.container : object</p>
+				<p style="text-indent:30px;">
+					最外层容器，用于包含组件				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.viewSize : Number</p>
+				<p style="text-indent:30px;">
+					显示的页码数量（不包含前一页、后一页、首页、尾页四个按键），默认为：1
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.totalPage : Number</p>
+				<p style="text-indent:30px;">
+					总共有多少页（设置时必须大于或等于options.viewSize），默认为：100			
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.currentPage : Number</p>
+				<p style="text-indent:30px;">
+					选中的页码，可以设置（必须小于或等于options.totalPage），默认为：1
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.currentPagePosition : Number</p>
+				<p style="text-indent:30px;">
+					选中的页码显示的位置，默认为0（即第一个位置）				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.labelFirst : String</p>
+				<p style="text-indent:30px;">
+					首页按钮显示的内容							
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.labelPrev : String</p>
+				<p style="text-indent:30px;">
+					上一页按钮显示的内容							
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.labelNext : String</p>
+				<p style="text-indent:30px;">
+					下一页按钮显示的内容							
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.labelLast : String</p>
+				<p style="text-indent:30px;">
+					尾页按钮显示的内容							
+				</p>
+			</li>
+		</ul>
+		<!-- 组件方法 -->
+		<h4>组件方法:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">getCurrentPage</p>
+				<p style="text-indent:30px;">
+					获取当前页码值，并返回		
+				</p>
+			</li>
+		</ul>
+		<!-- 组件事件 -->
+		<h4>组件事件:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">beforeChange</p>
+				<p style="text-indent:30px;">
+					页码改变前促发
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+							<p style="text-indent:30px;">参数2: {Function}</p>
+							<p style="text-indent:30px;">促发事件后调用的函数.函数参数为：改变前的页码</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">afterChange</p>
+				<p style="text-indent:30px;">
+					页码改变前促发
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+							<p style="text-indent:30px;">参数2: {Function}</p>
+							<p style="text-indent:30px;">促发事件后调用的函数.函数参数为：改变后的页码</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+		</ul>
+		<h4>第一个分页器参数配置如下：</h4>
+		<img src="./images/1.png">
+		<h4>第二个分页器参数配置如下：</h4>
+		<img src="./images/2.png">
+	</div>
+	
+		
+</body>
+</html>

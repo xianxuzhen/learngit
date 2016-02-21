@@ -1,0 +1,10 @@
+html,body{margin: 0;padding: 0;height: 100%;height: 100%;}
+
+.tab_header:after{content: ".";display: block;clear: both;height: 0;overflow: hidden;}
+.tab_title{float: left;width: 60px;height: 25px;line-height: 25px;margin-right: 10px;text-align: center;background: #999;cursor: pointer;color: #fff;}
+.tab_content{display: none;width: 200px;height: 200px;border: 1px solid #555;}
+.tab_content.avtive{display: block;}
+
+/*换肤，skin_a 皮肤*/
+.skin_a .tab_title{width: 100px;height: 40px;background-color: yellow;line-height: 40px;}
+.skin_a .tab_content{width: 320px;}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日历</title>
+	<link rel="stylesheet" type="text/css" href="css/datePicker.css">
+</head>
+<body>
+	<h4>下面例子参数配置例子在文档最后</h4>
+	<div class="container">
+		<input type="text" class="getDateInput">
+	</div>
+
+	
+	</span><button class="btn1">您选择的时间</button>
+	</span><button class="btn2">隐藏</button>
+	</span><button class="btn3">显示</button>
+	<div class="div"><a href="#">点击获取日期:</a><span class="divspan"></div>
+
+
+	<script type="text/javascript" src="js/require.js" data-main="js/main"></script>
+	
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<div>
+		<h2>通过展示日历方便使用者快速填写日期，多用于需要填写日期的input表单输入控件。</h2>
+		<h3>参考手册</h3>
+		<!-- 配置参数 -->
+		<h4>参数配置:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">options.container : object</p>
+				<p style="text-indent:30px;">
+					最外层容器，一般用于包含选框和日历组件，作为日历定位的参考元素					
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.dateInput : object</p>
+				<p style="text-indent:30px;">
+					容器，一般为选框，用于接收所选择的日期	
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.format : String</p>
+				<p style="text-indent:30px;">
+					日期格式，例如："yyyy-mm-dd"或者"yyyy/mm/dd"，默认为"yy-mm-dd"。
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.weekStart : String</p>
+				<p style="text-indent:30px;">
+					定义一周的第一天取值，可以为"Mon"或者"Sun"，默认为"Mon"			
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.yearRange : Array</p>
+				<p style="text-indent:30px;">
+					设置年份的范围，若无设置，则为当前年份前后十年
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.offsetX : Number</p>
+				<p style="text-indent:30px;">
+					定位时的偏移量，X方向，默认0				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.offsetY : Number</p>
+				<p style="text-indent:30px;">
+					定位时的偏移量，Y方向，默认0							
+				</p>
+			</li>
+		</ul>
+		<!-- 组件方法 -->
+		<h4>组件方法:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">getSelectDate</p>
+				<p style="text-indent:30px;">
+					获取当前选择的日期		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">show</p>
+				<p style="text-indent:30px;">
+					显示日历插件		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">hide</p>
+				<p style="text-indent:30px;">
+					隐藏日历插件			
+				</p>
+			</li>
+		</ul>
+		<!-- 组件事件 -->
+		<h4>组件事件:</h4>
+		<ul>
+			<li>
+				<p>beforeSelectDate</p>
+				<p style="text-indent:30px;">
+					选择某个日期之前触发该事件
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+							<p style="text-indent:30px;">参数2: {Function}</p>
+							<p style="text-indent:30px;">促发事件后调用的函数.函数参数为：重新选择之前的日期</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+			<li>
+				<p>afterSelectDate</p>
+				<p style="text-indent:30px;">
+					选择日期之后触发该事件
+					<ul>
+						<li>
+							<span>参数:</span>
+							<p style="text-indent:30px;">参数1: {String}</p>
+							<p style="text-indent:30px;">自定义的事件类型.</p>
+							<p style="text-indent:30px;">参数2: {Function}</p>
+							<p style="text-indent:30px;">促发事件后调用的函数.回调函数参数为：重新选择之后的日期</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+		</ul>
+		<h4>第一个分页器参数配置如下：</h4>
+		<img src="./images/1.png">
+		<h4>第二个分页器参数配置如下：</h4>
+		<img src="./images/2.png">
+	</div>
+	
+		
+</body>
+</html>

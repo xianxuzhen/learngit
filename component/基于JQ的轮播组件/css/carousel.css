@@ -1,0 +1,32 @@
+html,body,ul,li{margin: 0;padding: 0;}
+ul,li{list-style: none;}
+li p.optiontitle{font-weight: bold;}
+
+.carousel0{position: relative;width: 560px;height: 140px;padding: 0 40px;background-color: #ccc;}
+.carousel_parent{position: relative;width: 100%;height: 100%;overflow: hidden;}
+.carousel_box{height: 100%;position: absolute;left: 0;top: 0;}
+.carousel_item{float:left;padding: 10px;height: 100%;box-sizing:border-box;}
+.carousel_item img{width: 100%;height: 100%;}
+.carousel_leftBtn,.carousel_rightBtn{position: absolute;width: 30px;height: 40px;background-color: red;cursor: pointer;z-index: 10;}
+.carousel_leftBtn{left: 0;top: 55px;}
+.carousel_rightBtn{right: 0;top: 55px;}
+
+/*换肤*/
+.carousel1{position: relative;width: 900px;height: 200px;padding: 0 40px;background-color: #601199;}
+.skin_a.carousel_parent{position: relative;width: 100%;height: 100%;overflow: hidden;}
+.skin_a .carousel_box{height: 100%;position: absolute;left: 0;top: 0;}
+.skin_a .carousel_item{float:left;padding: 15px;height: 100%;box-sizing:border-box;}
+.skin_a .carousel_item img{width: 100%;height: 100%;}
+.carousel1  .carousel_leftBtn,.carousel1 .carousel_rightBtn{position: absolute;width: 30px;height: 60px;background-color: green;cursor: pointer;z-index: 10;}
+.carousel1 .carousel_leftBtn{left: 0;top: 70px;}
+.carousel1 .carousel_rightBtn{right: 0;top: 70px;}
+
+/*换肤*/
+.carousel2{position: relative;width: 600px;height: 200px;padding: 0 40px;background-color: #ee7700;}
+.skin_b.carousel_parent{position: relative;width: 100%;height: 100%;overflow: hidden;}
+.skin_b .carousel_box{height: 100%;position: absolute;left: 0;top: 0;}
+.skin_b .carousel_item{float:left;padding: 0px;height: 100%;box-sizing:border-box;}
+.skin_b .carousel_item img{width: 100%;height: 100%;}
+.carousel2  .carousel_leftBtn,.carousel2 .carousel_rightBtn{position: absolute;width: 30px;height: 60px;background-color: yellow;cursor: pointer;z-index: 10;}
+.carousel2 .carousel_leftBtn{left: 0;top: 70px;}
+.carousel2 .carousel_rightBtn{right: 0;top: 70px;}

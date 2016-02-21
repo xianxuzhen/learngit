@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播器组件</title>
+	<link rel="stylesheet" type="text/css" href="css/carousel.css">
+</head>
+<body>
+	<h4>下面例子参数配置例子在本页文档最后</h4>
+	<br><br>		
+	<div class="carousel0"></div>
+	<br><br>
+	<div class="carousel1"></div>
+	<br><br>
+	<div class="carousel2"></div>
+	<script type="text/javascript" src="js/require.js" data-main="js/main"></script>
+	<br>
+	<br>
+	<div>
+		<h2>简单的无限轮播组件：多张图片并列展示或者一张，通过两边的按钮切换选中的图片，支持自动滚动和循环滚动</h2>
+		<h3>参考手册</h3>
+		<!-- 配置参数 -->
+		<h4>参数配置:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">options.container : object</p>
+				<p style="text-indent:30px;">
+					轮播器父容器					
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.items : Array</p>
+				<p style="text-indent:30px;">
+					描述每个滚动项的字符数据:
+					[{img: "./images/0.png",contentText:"contentText0"},{img: "./images/1.png",contentText:"contentText1"},{img: "./images/2.png",contentText:"contentText2"},{img: "./images/3.png",contentText:"contentText3"},{img: "./images/4.png",contentText:"contentText4"},{img: "./images/5.png",contentText:"contentText5"},{img: "./images/6.png",contentText:"contentText6"}]	
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.viewSize : Number</p>
+				<p style="text-indent:30px;">
+					描述一页显示多少个滚动项，默认3
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.hadBtn : Boolean</p>
+				<p style="text-indent:30px;">
+					是否有控制按钮			
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.skinClassName : String</p>
+				<p style="text-indent:30px;">
+					给选项卡更换样式的类名，默认为null，写法请参考carousel.css文件				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.autoplay : Boolean</p>
+				<p style="text-indent:30px;">
+					是否开启自动滚动				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.duration : Number</p>
+				<p style="text-indent:30px;">
+					执行一次动画花费的时间				
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">options.interval : Number</p>
+				<p style="text-indent:30px;">
+					间隔多久执行一次动画				
+				</p>
+			</li>
+		</ul>
+		<!-- 组件方法 -->
+		<h4>组件方法:</h4>
+		<ul>
+			<li>
+				<p class="optiontitle">start</p>
+				<p style="text-indent:30px;">
+					启动滚动		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">stop</p>
+				<p style="text-indent:30px;">
+					停止滚动		
+				</p>
+			</li>
+			<li>
+				<p class="optiontitle">getTotalCount</p>
+				<p style="text-indent:30px;">
+					取得数据项的总数目
+					<ul>
+						<li>
+							<span>返回值:</span>
+							<p style="text-indent:30px;">返回值: {Number}</p>
+							<p style="text-indent:30px;">取得数据项的总数目.</p>
+						</li>
+					</ul>				
+				</p>
+			</li>
+		</ul>
+		<h4>第一个分页器参数配置如下：</h4>
+		<img src="./images/01.png">
+		<h4>第二个分页器参数配置如下：</h4>
+		<img src="./images/02.png">
+		<h4>第一个分页器参数配置如下：</h4>
+		<img src="./images/03.png">
+	</div>
+</body>
+</html>
