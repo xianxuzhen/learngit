@@ -64,7 +64,7 @@ body{background-color: #f8f8f8;}
 #m-course .btn{width: 200px;height: 50px;background-color: #ffffff;text-align: center;font: 20px/50px "微软雅黑";color: #666666;cursor: pointer; }
 #m-course .tabActive{background-color: #39a030;color: #ffffff;}
 #m-course .course{margin-right: 20px;margin-bottom: 25px;padding: 1px;width: 223px;height: 230px;box-shadow: 0px 2px 4px #d4d3d3;background-color: #ffffff;position: relative;}
-#m-course .courseImg{width: 100%;margin-bottom: 10px;}
+#m-course .courseImg{width: 223px;height: 125px;margin-bottom: 10px;}
 #m-course .introduce{padding: 0 5px;font: 12px/12px "微软雅黑";}
 #m-course .title,#m-course .album{margin-bottom: 10px;}
 #m-course .title{color: #333333;}
